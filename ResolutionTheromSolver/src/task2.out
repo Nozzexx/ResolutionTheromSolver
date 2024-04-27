@@ -1,0 +1,13 @@
+1. NoLeakH1 ^ NoLeakH2 => NoLeak {}
+2. okH1 => NoLeakH1 {}
+3. ~okH1 ^ ~V1 => NoLeakH1 {}
+4. okH2 => NoLeakH2 {}
+5. ~okH2 ^ ~V2 => NoLeakH2 {}
+6. ~okH2 {}
+7. okH1 {}
+8. ~V2 {}
+9. NoLeak {}
+10. => NoLeakH1 ^ ~V1 {3, 2}
+11. => NoLeakH2 ^ ~V2 {5, 4}
+12. => NoLeakH2 {6, 4}
+Fail

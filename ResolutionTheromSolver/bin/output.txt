@@ -1,0 +1,19 @@
+1. ~NoLeakH1 v ~NoLeakH2 NoLeak {}
+2. ~okH1 NoLeakH1 v {}
+3. okH1 NoLeakH1 v V1 {}
+4. NoLeakH2 v ~okH2 {}
+5. okH2 NoLeakH2 v V2 {}
+6. ~okH2 {}
+7. okH1 {}
+8. ~V2 {}
+9. ~NoLeak {}
+10. ~okH1 v ~NoLeakH2 NoLeak {2, 1}
+11. okH1 v ~NoLeakH2 V1 NoLeak {3, 1}
+12. NoLeakH1 v V1 {3, 2}
+13. ~NoLeakH1 v ~okH2 NoLeak {4, 1}
+14. ~NoLeakH1 okH2 v V2 NoLeak {5, 1}
+15. NoLeakH2 v V2 {5, 4}
+16. NoLeakH1 v {7, 2}
+17. okH2 NoLeakH2 v {8, 5}
+18. ~NoLeakH1 v ~NoLeakH2 {9, 1}
+Fail
